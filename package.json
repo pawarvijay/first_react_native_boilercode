@@ -1,0 +1,41 @@
+{
+  "name": "onthemove",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "lint": "esw app/** --fix",
+    "lint-watch": "esw --watch --changed app/** --fix",
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "start-ios": "react-native run-ios && npm run lint-watch",
+    "start-android": "react-native run-android && npm run lint-watch",
+    "test": "jest"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "dependencies": {
+    "prop-types": "^15.6.1",
+    "react": "16.4.0",
+    "react-native": "0.55.4",
+    "react-navigation": "^2.2.4"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "babel-jest": "23.0.1",
+    "babel-preset-react-native": "4.0.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.9.1",
+    "eslint-plugin-react-native": "^3.2.1",
+    "eslint-watch": "^3.1.5",
+    "jest": "23.1.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.13.4",
+    "react-test-renderer": "16.3.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
